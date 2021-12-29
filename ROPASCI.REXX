@@ -4,6 +4,7 @@
 /*                                                                    */
 /**********************************************************************/
 /*INITIATED                             29-08-2016            BIERMAP */
+/*UPDATED                               29-12-2021            BIERMAP */
 /**********************************************************************/
 /* TRACE ?I */
 /**********************************************************************/
@@ -71,7 +72,7 @@ WHEN choice = 0 THEN choice = "ROCK"
 WHEN choice = 1 THEN choice = "PAPER"
 WHEN choice = 2 THEN choice = "SCISSORS"
 OTHERWISE
-   SAY "ERROR!"
+   SAY "ERROR! WRONG INPUT!"
    EXIT
 END
 RETURN
@@ -129,7 +130,7 @@ SAY "You chose " || sel || "."
 SAY "Computer chose " || choice || "."
 losecount = losecount + 1
 SAY choice || " beats " || sel || "! You are a loser! You lost " ||,
-    losecount || " times. Shit happens."
+    losecount || " times. Sh*t happens."
 RETURN
 /**************************/
 /*SUBR lose END           */
@@ -141,13 +142,13 @@ wrapup:
 SAY "****** GAME OVER! ******"
 SAY wincount || " wins, " || losecount || " loses, " || tiecount || " ties."
 IF wincount > losecount THEN DO
-SAY "You WIN, you lucky son of a bitch!"
+SAY "You WIN, you lucky son of a b*tch!"
 END
 IF wincount = losecount THEN DO
-SAY "You have a TIE, haha fuck you."
+SAY "You have a TIE, haha sucks to be you."
 END
 IF wincount < losecount THEN DO
-SAY "You LOSE! Go end your life."
+SAY "You LOSE! Go f*ck yourself or play again!"
 END
 SAY "****** GAME OVER! ******"
 RETURN
